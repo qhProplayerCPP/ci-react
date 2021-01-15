@@ -13,6 +13,7 @@ export function FILTER_LIST(params) {
         onDrop={(event) => {
           event.preventDefault();
           var data = event.dataTransfer.getData('Image');
+          console.log(event.target);
           if (event.target.className === 'filter-box' || event.target.className === 'container-list') {
           } else document.getElementById(params.type).appendChild(document.getElementById(data));
         }}

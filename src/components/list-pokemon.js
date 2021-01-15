@@ -9,6 +9,7 @@ export function Pokemon(props) {
       onDrop={(event) => {
         event.preventDefault();
         var data = event.dataTransfer.getData('Image');
+        console.log(event.target);
         if (event.target.className === 'filter-box' || event.target.className === 'container-list') {
         } else if (event.target.id >= 0 && event.target.id <= 14) {
           document.getElementById(event.target.id).insertAdjacentElement('afterend', document.getElementById(data));
