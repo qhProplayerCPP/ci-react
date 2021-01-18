@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-
+import showInfo from './ultis/ultis';
 function App() {
-  return <div className="App">todoapp</div>;
+  return <showInfo />;
 }
 
 export default App;
