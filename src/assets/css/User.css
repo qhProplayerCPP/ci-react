@@ -1,0 +1,6 @@
+.up-form-container {
+  border: 1px solid black;
+  margin: 5rem 30%;
+  display: flex;
+  flex-direction: column;
+}
