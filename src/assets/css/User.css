@@ -1,6 +1,31 @@
-.up-form-container {
-  border: 1px solid black;
-  margin: 5rem 30%;
+.nav-bar {
+  background-color: rgb(145, 253, 102);
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.side-bar {
+  width: 20%;
+  min-height: 40rem;
+  height: inherit;
+  background-color: rgb(138, 215, 218);
+}
+#add-items {
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
+  height: 15rem;
+  width: 30%;
+  margin: 1rem 1rem;
+}
+.todo-items {
+  border: 1px solid black;
+  height: 15rem;
+  width: 30%;
+  margin: 1rem 1rem;
 }

@@ -35,19 +35,17 @@ export function signUp(data) {
       .get()
       .then((querySnapshot) => {
         if (!querySnapshot.empty) {
-          throw new Error('existed');
+          throw new Error('Existed');
         }
       })
       .then(() => {
-        //sign up
         db.collection('users') //.doc(id moi).set({}) *thay cho add*
           .add({
             username: username,
             password: password,
           })
-          .then((data) => {
-            console.log('success');
-            console.log(data.id);
+          .then(() => {
+            alert('Sign up successful! You can sign in now');
           });
       })
       .catch((e) => {
@@ -55,36 +53,6 @@ export function signUp(data) {
       });
   });
 }
-
-// export async function signUp(data) {
-//   try {
-//     const { username, password } = data;
-//     const flag = await db
-//       .collection('users')
-//       .where('username', '==', username)
-//       .get()
-//       .then((querySnapshot) => {
-//         return querySnapshot.empty;
-//       });
-//     if (!flag) {
-//       throw new Error('existed');
-//     }
-//     const newuser = await db
-//       .collection('users') //.doc(id moi).set({}) *thay cho add*
-//       .add({
-//         username: username,
-//         password: password,
-//       })
-//       .then((data) => {
-//         console.log('success');
-//         console.log(data.id);
-//       });
-//     console.log(newuser);
-//     return newuser;
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }
 
 export async function addToDo(data) {
   try {
